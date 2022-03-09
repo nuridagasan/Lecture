@@ -1,0 +1,6 @@
+package Generics
+
+class Generic {
+
+
+}
