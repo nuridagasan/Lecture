@@ -1,0 +1,50 @@
+<!--
+
+    Let's create a business card!
+
+    Business Card
+
+    Nuri (name)
+
+    Dagasan (surname)
+
+    +44 (055) 555-5551 (home)
+
+    +44 (055) 555-5552 (work)
+
+    +44 (055) 555-5553 (mobile)
+
+    n.dagasan@example.com (e-mail)
+
+-->
+<!--
+MY SOLUTION
+
+<BusinessCard>
+    <name>Nuri</name>
+    <surname>Dagasan</surname>
+    <PhoneNumbers>
+        <home>+44 (055) 555-5551</home>
+        <work>+44 (055) 555-5552</work>
+        <mobile>+44 (055) 555-5553</mobile>
+    </PhoneNumbers>
+    <email>n.dagasan@example.com</email>
+</BusinessCard>
+
+-->
+
+<!-- ANOTHER SOLUTION 
+    IDE can parse data from this file
+    <phone></phone> tag is created 3 times.
+    It is not a good way to implement this.
+    It will be changed future lessons.
+-->
+
+<BusinessCard>
+    <name>Nuri</name>
+    <surname>Dagasan</surname>
+    <phone type="home">+44 (055) 555-5551</phone>
+    <phone type="work">+44 (055) 555-5552</phone>
+    <phone type="mobile">+44 (055) 555-5553</phone>
+    <email>n.dagasan@example.com</email>
+</BusinessCard>
