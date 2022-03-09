@@ -1,3 +1,6 @@
-/.idea/
-/out/
-/Lec2.iml
+# Gradle files
+/out
+
+# IntelliJ
+*.iml
+/.idea
