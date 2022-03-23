@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<db:Product xmlns:db="http://www.example.com/schema.xsd">
+  <db:ProductDetails db:productName="Fridge" db:productID="15" />
+  <db:ProductionDate>2022-03-18</db:ProductionDate>
+  <db:Quantity>25</db:Quantity>
+  <db:Size db:length="12" db:width="16" />
+</db:Product>

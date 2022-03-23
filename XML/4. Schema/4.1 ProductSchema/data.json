@@ -1,0 +1,13 @@
+{
+  "Data": {
+    "Root": "Product",
+    "NameSpace": "http://www.example.com/schemad.xsd",
+    "ProductDetails": {
+      "ProductName": "Fridge",
+      "ProductID": 15
+    },
+    "ProductionDate": "2022-03-18",
+    "Quantity": 25,
+    "Size": 152
+  }
+}
