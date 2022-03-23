@@ -18,7 +18,24 @@
 
 ### Describing Data with XML
 
--  [Check File](./descData.xml)
+-  [Check file](./describeData.xml)
+
+Example XML code block:
+
+<code>
+
+    <BusinessCard>
+        <name>Nuri</name>
+        <surname>Dagasan</surname>
+        <phone type="home">+44 (055) 555-5551</phone>
+        <phone type="work">+44 (055) 555-5552</phone>
+        <phone type="mobile">+44 (055) 555-5553</phone>
+        <email>n.dagasan@example.com</email>
+    </BusinessCard>
+
+</code> 
+
+
 
 ### Advantages and drawbacks of XML
 

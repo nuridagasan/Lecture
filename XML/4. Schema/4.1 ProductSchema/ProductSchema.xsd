@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.example.com/schema.xsd"
+           xmlns:px="http://www.example.com/schema.xsd"
+           attributeFormDefault="qualified"
+>
+<xs:element name="Product">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="px:ProductDetails"/>
+            <xs:element ref="px:ProductionDate"/>
+            <xs:element ref="px:Quantity"/>
+            <xs:element ref="px:Size"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+    <xs:element name="ProductDetails">
+        <xs:complexType>
+            <xs:attribute name="productName" type= "xs:string" use="required"/>
+            <xs:attribute name="productID" type= "xs:integer" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="ProductionDate">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:date"/>
+        </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Quantity">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:integer"/>
+        </xs:simpleContent>
+    </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Size">
+        <xs:complexType>
+                    <xs:attribute name="length" type= "px:lengthType" use="required"/>
+                    <xs:attribute name="width" type= "px:widthType" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="lengthType">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="1" />
+            <xs:maxExclusive value="51" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="widthType">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="1" />
+            <xs:maxExclusive value="16" />
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

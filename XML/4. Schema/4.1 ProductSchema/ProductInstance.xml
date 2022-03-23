@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<demo:Product xmlns:demo="http://www.example.com/schema.xsd">
+    <demo:ProductDetails demo:productName="Tedy Bear" demo:productID="15"/>
+    <demo:ProductionDate>2022-03-18</demo:ProductionDate>
+    <demo:Quantity>2512312</demo:Quantity>
+    <demo:Size demo:length="15" demo:width="14"/>
+</demo:Product>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.example.com/schema.xsd"
+xmlns:ex="http://www.example.com/schema.xsd"
+attributeFormDefault="qualified">
+
+    <xs:element name="Program">
+        <xs:annotation>
+            <xs:documentation>
+                The Top level program root
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ex:Event" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Event">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="ex:StartTime" minOccurs="0"/>
+                <xs:group ref="ex:LaserCondition" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="StartTime">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:double">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Content must be only double
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:attribute name="units" type= "ex:TimeUnits" use="required"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:simpleType name="TimeUnits">
+        <xs:annotation>
+            <xs:documentation>
+                Restriction on string start time can only include 'ms' or 'us'.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ms" />
+            <xs:enumeration value="us" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="Actions">
+        <xs:annotation>
+            <xs:documentation>
+                This is the basic definition of laserOn/laserOff
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="channel" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <xs:element name="LaserOn" type="ex:Actions" />
+    <xs:element name="LaserOff" type="ex:Actions" />
+
+    <xs:group name="LaserCondition">
+        <xs:choice>
+            <xs:element ref="ex:LaserOn" />
+            <xs:element ref="ex:LaserOff" />
+        </xs:choice>
+    </xs:group>
+</xs:schema>

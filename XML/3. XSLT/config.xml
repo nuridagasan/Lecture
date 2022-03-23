@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ex:Program xmlns:ex="http://www.example.com/schema.xsd">
+<ex:Event>
+    <ex:StartTime ex:units="us">15.0</ex:StartTime>
+    <ex:LaserOn ex:channel="TcaR"/>
+    <ex:LaserOn ex:channel="EBaR"/>
+</ex:Event>
+ <ex:Event>
+     <ex:StartTime ex:units="ms">50.5</ex:StartTime>
+     <ex:LaserOff ex:channel="TCaR"/>
+
+ </ex:Event>
+</ex:Program>
